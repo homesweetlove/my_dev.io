@@ -165,6 +165,27 @@ svg{ width: 20px; height: 20px; }
   pointer-events: none;
 }
 .hero-inner{ position: relative; z-index:1; max-width: 760px; }
+.hero-avatar{
+  width: 84px; height: 84px;
+  border-radius: 50%;
+  border: 3px solid var(--surface);
+  box-shadow: 0 0 0 1px var(--border), var(--shadow);
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+.hero-handle{
+  display:inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin: 4px 0 6px;
+  transition: color .2s ease, border-color .2s ease;
+}
+.hero-handle:hover{ color: var(--accent); border-color: var(--accent); }
 .eyebrow{
   font-family: 'JetBrains Mono', monospace;
   color: var(--accent);
@@ -295,6 +316,17 @@ svg{ width: 20px; height: 20px; }
 }
 .stat-label{ font-size: 0.82rem; color: var(--text-faint); }
 
+.bio-quote{
+  margin: 0 0 20px;
+  padding: 14px 20px;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
 @media (max-width: 760px){
   .about-grid{ grid-template-columns: 1fr; }
 }
@@ -334,6 +366,14 @@ svg{ width: 20px; height: 20px; }
 .project-links{ display:flex; gap: 18px; }
 .project-links a{ font-size: 0.88rem; font-weight: 600; color: var(--text); }
 .project-links a:hover{ color: var(--accent); }
+
+.projects-more{
+  text-align:center;
+  margin-top: 36px;
+  color: var(--text-faint);
+  font-size: 0.92rem;
+}
+.projects-more a{ color: var(--accent); font-weight: 600; }
 
 @media (max-width: 760px){
   .project-grid{ grid-template-columns: 1fr; }

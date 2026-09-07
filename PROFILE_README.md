@@ -1,38 +1,35 @@
 <div align="center">
 
-# 안녕하세요, 저는 홍길동입니다 👋
+<img src="https://avatars.githubusercontent.com/u/232012965?v=4" width="100" style="border-radius:50%" />
 
-**풀스택 개발자** · 새로운 것을 만들고 배우는 걸 좋아합니다
+# i_so_free (@homesweetlove)
+
+"오타쿠가 세상을 지배한다!"
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-6c5ce7?style=for-the-badge&logo=googlechrome&logoColor=white)](https://homesweetlove.github.io/my_dev.io/)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:you@example.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourhandle)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/homesweetlove)
 
 </div>
 
 ---
 
-### 🧑‍💻 About Me
+### 🧑‍💻 About
 
-- 🔭 현재 **OO 회사**에서 근무 중입니다
-- 🌱 요즘은 성능 최적화와 개발자 경험(DX)을 공부하고 있어요
-- 💬 React / Node.js / TypeScript 에 대해 이야기하는 걸 좋아합니다
-- 📫 연락은 **you@example.com** 으로 주세요
-- ⚡ 취미: 오타쿠가 세상을 지배한다고 믿음 😄
+- 🐙 GitHub: [github.com/homesweetlove](https://github.com/homesweetlove)
+- 📅 GitHub 가입: 2025년 9월
+- 💻 주 사용 언어: TypeScript, Java
+- 📦 Public Repos: 6개
 
 ### 🛠️ Tech Stack
 
 <div align="center">
 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
 </div>
 

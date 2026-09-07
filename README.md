@@ -12,9 +12,10 @@
 2. **Source**를 `main` 브랜치(혹은 사용 중인 기본 브랜치), 폴더는 `/ (root)`로 설정합니다.
 3. 저장하면 `https://homesweetlove.github.io/my_dev.io/` 주소로 사이트가 배포됩니다.
 
-## 내용 수정하기
+## 내용
 
-아래 파일에서 이름, 소개, 프로젝트, 기술 스택, 연락처 등을 본인 정보로 교체하세요.
+GitHub 계정(`@homesweetlove`)의 실제 공개 정보(아바타, bio, 공개 저장소 목록, 사용 언어)를 기반으로 채워져 있습니다.
+새 저장소를 만들거나 소개를 바꾸면 아래 파일만 수정하면 됩니다.
 
 - `index.html` — 페이지 구조 및 텍스트 콘텐츠
 - `assets/style.css` — 색상, 폰트, 레이아웃 등 디자인
@@ -22,10 +23,9 @@
 
 주요 수정 포인트:
 
-- `<title>`, 자기소개 문구, 소셜 링크(`github.com/yourhandle`, `mailto:you@example.com` 등)
-- `#projects` 섹션의 프로젝트 카드 4개
+- `#projects` 섹션 — 새 저장소를 추가/제거하려면 카드를 복사/삭제
 - `#skills` 섹션의 기술 스택 목록
-- `#blog` 섹션의 글 목록
+- `#activity` 섹션 — 최근 업데이트된 저장소 목록
 
 ## GitHub 프로필 README
 

@@ -23,7 +23,7 @@ navLinksMobile.querySelectorAll('a').forEach(a =>
 );
 
 // ---- typing effect ----
-const roles = ['풀스택 개발자', 'React & Node.js', '문제 해결사', '평생 학습자'];
+const roles = ['TypeScript Developer', 'Java', 'GitHub Explorer', '오타쿠가 세상을 지배한다'];
 const typeTarget = document.getElementById('type-target');
 let roleIndex = 0, charIndex = 0, deleting = false;
 
