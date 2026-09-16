@@ -20,6 +20,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#contributions">Contributions</a></li>
       <li><a href="#activity">Activity</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -37,6 +38,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#contributions">Contributions</a></li>
     <li><a href="#activity">Activity</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -95,15 +97,15 @@
         </div>
         <div class="about-stats">
           <div class="stat-card">
-            <span class="stat-num" data-count="6">0</span>
+            <span class="stat-num" id="stat-repos" data-count="6">0</span>
             <span class="stat-label">Public Repos</span>
           </div>
           <div class="stat-card">
-            <span class="stat-num" data-count="2">0</span>
+            <span class="stat-num" id="stat-langs" data-count="2">0</span>
             <span class="stat-label">Languages Used</span>
           </div>
           <div class="stat-card">
-            <span class="stat-num" data-count="1">0</span>
+            <span class="stat-num" id="stat-years" data-count="1">0</span>
             <span class="stat-label">Year on GitHub</span>
           </div>
           <div class="stat-card">
@@ -118,11 +120,17 @@
   <!-- PROJECTS -->
   <section id="projects" class="section section-alt">
     <div class="section-inner">
-      <p class="section-tag">02 · Projects</p>
+      <p class="section-tag">02 · Projects <span class="live-badge" id="live-badge"><span class="live-dot"></span>Live from GitHub</span></p>
       <h2 class="section-title">GitHub 저장소</h2>
-      <div class="project-grid">
 
-        <article class="project-card">
+      <div class="project-filters" id="project-filters">
+        <button class="filter-pill is-active" data-lang="all">All</button>
+      </div>
+
+      <div class="project-grid" id="project-grid">
+
+        <!-- fallback static cards (replaced by script.js once the GitHub API responds) -->
+        <article class="project-card" data-lang="public">
           <div class="project-thumb" style="--c1:#7c6cff;--c2:#00d4ff;">📦</div>
           <div class="project-body">
             <h3>working_toolpage</h3>
@@ -134,7 +142,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-lang="typescript">
           <div class="project-thumb" style="--c1:#ff6ec7;--c2:#ffa66c;">🧩</div>
           <div class="project-body">
             <h3>joking</h3>
@@ -146,7 +154,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-lang="typescript">
           <div class="project-thumb" style="--c1:#37e8b8;--c2:#4d7bff;">🔧</div>
           <div class="project-body">
             <h3>joko</h3>
@@ -158,7 +166,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-lang="java">
           <div class="project-thumb" style="--c1:#ffd166;--c2:#ff7a7a;">☕</div>
           <div class="project-body">
             <h3>java_endtest</h3>
@@ -170,7 +178,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-lang="public">
           <div class="project-thumb" style="--c1:#a78bfa;--c2:#f472b6;">📐</div>
           <div class="project-body">
             <h3>blueprint</h3>
@@ -182,7 +190,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-lang="public">
           <div class="project-thumb" style="--c1:#34d399;--c2:#60a5fa;">🌀</div>
           <div class="project-body">
             <h3>pantum</h3>
@@ -209,8 +217,8 @@
       <div class="skills-grid">
 
         <div class="skill-group">
-          <h3>Languages</h3>
-          <div class="skill-pills">
+          <h3>Languages <span class="skill-live-note">(저장소 기반 자동 집계)</span></h3>
+          <div class="skill-pills" id="lang-pills">
             <span>TypeScript</span><span>JavaScript</span><span>Java</span>
           </div>
         </div>
@@ -233,12 +241,31 @@
     </div>
   </section>
 
+  <!-- CONTRIBUTIONS -->
+  <section id="contributions" class="section">
+    <div class="section-inner">
+      <p class="section-tag">04 · Contributions</p>
+      <h2 class="section-title">잔디밭</h2>
+      <div class="contrib-card">
+        <img
+          class="contrib-graph"
+          id="contrib-graph"
+          src="https://ghchart.rshah.org/6c5ce7/homesweetlove"
+          alt="homesweetlove GitHub contribution graph"
+          loading="lazy">
+        <p class="contrib-fallback" id="contrib-fallback" hidden>
+          잔디 그래프를 불러오지 못했어요. <a href="https://github.com/homesweetlove" target="_blank" rel="noopener">GitHub 프로필</a>에서 확인해보세요.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- ACTIVITY -->
   <section id="activity" class="section section-alt">
     <div class="section-inner">
-      <p class="section-tag">04 · Activity</p>
+      <p class="section-tag">05 · Activity</p>
       <h2 class="section-title">최근 업데이트</h2>
-      <div class="blog-list">
+      <div class="blog-list" id="activity-list">
 
         <a href="https://github.com/homesweetlove/blueprint" class="blog-item" target="_blank" rel="noopener">
           <span class="blog-date">2026.08.11</span>
@@ -263,7 +290,7 @@
   <!-- CONTACT -->
   <section id="contact" class="section contact">
     <div class="section-inner">
-      <p class="section-tag">05 · Contact</p>
+      <p class="section-tag">06 · Contact</p>
       <h2 class="section-title">GitHub에서 만나요</h2>
       <p class="contact-desc">
         가장 확실한 연락 방법은 GitHub입니다.<br>

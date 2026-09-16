@@ -15,17 +15,27 @@
 ## 내용
 
 GitHub 계정(`@homesweetlove`)의 실제 공개 정보(아바타, bio, 공개 저장소 목록, 사용 언어)를 기반으로 채워져 있습니다.
-새 저장소를 만들거나 소개를 바꾸면 아래 파일만 수정하면 됩니다.
 
 - `index.html` — 페이지 구조 및 텍스트 콘텐츠
 - `assets/style.css` — 색상, 폰트, 레이아웃 등 디자인
-- `assets/script.js` — 타이핑 효과 문구, 인터랙션
+- `assets/script.js` — GitHub API 연동, 인터랙션, 애니메이션
 
-주요 수정 포인트:
+### 실시간 GitHub 연동
 
-- `#projects` 섹션 — 새 저장소를 추가/제거하려면 카드를 복사/삭제
-- `#skills` 섹션의 기술 스택 목록
-- `#activity` 섹션 — 최근 업데이트된 저장소 목록
+페이지를 열면 `assets/script.js`가 GitHub REST API(`api.github.com/users/homesweetlove`,
+`.../repos`)를 브라우저에서 직접 호출해서 아래 영역을 **실시간으로** 채웁니다.
+새 저장소를 만들거나 기존 저장소를 업데이트하면 코드 수정 없이 사이트에 자동 반영됩니다.
+
+- `#projects` — 최근 업데이트된 공개 저장소 카드 (언어별 필터 포함)
+- `#skills`의 Languages — 저장소에서 실제로 사용된 언어 자동 집계
+- `#about`의 통계 카드 — Public Repos / Languages Used / Year on GitHub
+- `#activity` — 최근 업데이트된 저장소 목록
+- `#contributions` — [ghchart](https://github.com/RayHY/github-contribution-chart-generator) 잔디 그래프
+
+GitHub API 요청이 실패하거나(오프라인, API rate limit 등) 느릴 경우에는 `index.html`에
+하드코딩된 정적 콘텐츠가 그대로 보이도록 폴백 처리되어 있습니다 (`#projects`, `#activity`의
+기존 마크업이 폴백 역할). 새 저장소를 추가했을 때 폴백 콘텐츠도 맞추고 싶다면 해당 섹션의
+정적 카드를 직접 수정하면 됩니다.
 
 ## GitHub 프로필 README
 
@@ -38,9 +48,12 @@ GitHub 계정(`@homesweetlove`)의 실제 공개 정보(아바타, bio, 공개 �
 
 원하시면 이 저장소도 대신 만들어 드릴 수 있습니다.
 
-## 디자인
+## 디자인 / 인터랙션
 
 - 다크/라이트 모드 자동 감지 + 수동 토글
 - 보라~시안 그라디언트 포인트 컬러의 미니멀 개발자 스타일
 - Inter / JetBrains Mono 폰트
+- 스크롤 시 요소가 나타나는 reveal 애니메이션 (`prefers-reduced-motion` 존중)
+- 프로젝트 카드 마우스 틸트(3D 기울임) 효과
+- 언어별 프로젝트 필터
 - 빌드 도구 없이 순수 HTML/CSS/JS로 작성 (별도 설치 불필요)
