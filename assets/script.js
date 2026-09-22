@@ -242,7 +242,7 @@ function renderStats(user, repos) {
   const repoEl = document.getElementById('stat-repos');
   const langEl = document.getElementById('stat-langs');
   const yearEl = document.getElementById('stat-years');
-  if (repoEl) repoEl.dataset.count = user.public_repos ?? repos.length;
+  if (repoEl) repoEl.dataset.count = repos.length;
   if (langEl) langEl.dataset.count = languages.size;
   if (yearEl) yearEl.dataset.count = years;
 }
