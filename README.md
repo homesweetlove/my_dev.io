@@ -23,6 +23,12 @@ GitHub 계정(`@homesweetlove`)의 실제 공개 정보(아바타, bio, 공개 �
 - `index.html` — 페이지 구조 및 텍스트 콘텐츠
 - `assets/style.css` — 색상, 폰트, 레이아웃 등 디자인
 - `assets/script.js` — GitHub API 연동, 인터랙션, 애니메이션
+- `tools.html` — 직장인을 위한 개인정보 비저장 업무 도구 허브
+- `assets/tools.css`, `assets/tools.js` — 문서 작성/자동 저장/한글·Word 호환 저장/PDF 인쇄, JSON, 텍스트, 시간 변환, 집중 타이머
+
+### 문서 스튜디오
+
+`tools.html`의 문서 스튜디오는 별도 서버 없이 GitHub Pages에서 브라우저만으로 동작합니다. 작성 내용은 `localStorage`에만 저장되며, 한글과 Word에서 열 수 있는 `.doc` 호환 파일, HTML, Markdown, TXT로 내보낼 수 있습니다. PDF는 브라우저의 인쇄 대화상자에서 `PDF로 저장`을 선택합니다. `문서/HWP 열기`로 HWP 5.0/5.1 문서를 읽기 전용 미리보기로 열 수 있으며, 이때도 파일은 서버로 전송되지 않습니다. HWP 문서의 편집 및 HWP 바이너리 재저장은 브라우저용 뷰어의 범위를 넘어가므로 지원하지 않습니다.
 
 ### 실시간 GitHub 연동
 
