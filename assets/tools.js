@@ -41,6 +41,7 @@ const documentTitle = document.getElementById('document-title');
 const documentMessage = document.getElementById('document-message');
 const hwpViewerShell = document.getElementById('hwp-viewer-shell');
 const hwpViewerContainer = document.getElementById('hwp-viewer');
+const hwpMessage = document.getElementById('hwp-message');
 let hwpViewerInstance = null;
 const saveState = document.getElementById('save-state');
 const documentStats = document.getElementById('document-stats');
@@ -92,6 +93,8 @@ document.getElementById('clear-document').addEventListener('click', () => {
 document.getElementById('load-document').addEventListener('click', () => document.getElementById('file-input').click());
 async function openHwpFile(file) {
   documentMessage.textContent = 'HWP 뷰어를 준비하는 중입니다. 파일은 외부로 전송되지 않습니다.';
+  hwpMessage.textContent = 'HWP 뷰어를 준비하는 중입니다. 파일은 외부로 전송되지 않습니다.';
+  hwpMessage.classList.remove('error');
   try {
     const { Viewer } = await import('https://cdn.jsdelivr.net/npm/hwp.js@0.0.3/build/esm.js');
     const bytes = new Uint8Array(await file.arrayBuffer());
@@ -107,11 +110,16 @@ async function openHwpFile(file) {
     hwpViewerShell.hidden = false;
     document.getElementById('hwp-file-name').textContent = file.name;
     documentMessage.textContent = 'HWP 문서를 브라우저에서 열었습니다. 읽기 전용 미리보기입니다.';
+    hwpMessage.textContent = 'HWP 문서를 브라우저에서 열었습니다. 읽기 전용 미리보기입니다.';
+    openTool('hwp');
   } catch (error) {
     documentMessage.textContent = '이 HWP 파일은 지원되지 않는 버전이거나 뷰어를 불러오지 못했습니다. HWP 5.0/5.1 파일을 사용해주세요.';
     documentMessage.classList.add('error');
+    hwpMessage.textContent = '이 HWP 파일은 지원되지 않는 버전이거나 뷰어를 불러오지 못했습니다. HWP 5.0/5.1 파일을 사용해주세요.';
+    hwpMessage.classList.add('error');
   }
 }
+document.getElementById('hwp-load').addEventListener('click', () => document.getElementById('file-input').click());
 document.getElementById('close-hwp').addEventListener('click', () => {
   hwpViewerInstance?.distory();
   hwpViewerInstance = null;
@@ -119,6 +127,7 @@ document.getElementById('close-hwp').addEventListener('click', () => {
   hwpViewerShell.hidden = true;
   documentEditor.hidden = false;
   documentMessage.textContent = '편집기로 돌아왔습니다.';
+  hwpMessage.textContent = 'HWP 파일을 선택하면 미리보기가 이곳에 표시됩니다.';
 });
 document.getElementById('file-input').addEventListener('change', event => {
   const file = event.target.files[0];

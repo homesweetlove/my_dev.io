@@ -35,10 +35,11 @@
     <aside class="tool-nav" aria-label="도구 선택">
       <p class="nav-label">TOOLS</p>
       <button class="tool-tab is-active" data-tool="document" type="button"><span class="tool-index">01</span><span><strong>문서 스튜디오</strong><small>작성 · Word · PDF</small></span></button>
-      <button class="tool-tab" data-tool="json" type="button"><span class="tool-index">02</span><span><strong>JSON 정리</strong><small>검증 · 포맷 · 압축</small></span></button>
-      <button class="tool-tab" data-tool="text" type="button"><span class="tool-index">03</span><span><strong>텍스트 작업대</strong><small>공백 · 줄바꿈 · 글자 수</small></span></button>
-      <button class="tool-tab" data-tool="timestamp" type="button"><span class="tool-index">04</span><span><strong>시간 변환</strong><small>Unix timestamp · 날짜</small></span></button>
-      <button class="tool-tab" data-tool="focus" type="button"><span class="tool-index">05</span><span><strong>집중 타이머</strong><small>25분 집중 · 5분 휴식</small></span></button>
+      <button class="tool-tab" data-tool="hwp" type="button"><span class="tool-index">02</span><span><strong>HWP 뷰어</strong><small>한글 문서 열기</small></span></button>
+      <button class="tool-tab" data-tool="json" type="button"><span class="tool-index">03</span><span><strong>JSON 정리</strong><small>검증 · 포맷 · 압축</small></span></button>
+      <button class="tool-tab" data-tool="text" type="button"><span class="tool-index">04</span><span><strong>텍스트 작업대</strong><small>공백 · 줄바꿈 · 글자 수</small></span></button>
+      <button class="tool-tab" data-tool="timestamp" type="button"><span class="tool-index">05</span><span><strong>시간 변환</strong><small>Unix timestamp · 날짜</small></span></button>
+      <button class="tool-tab" data-tool="focus" type="button"><span class="tool-index">06</span><span><strong>집중 타이머</strong><small>25분 집중 · 5분 휴식</small></span></button>
     </aside>
 
     <div class="tool-panels">
@@ -51,9 +52,15 @@
         </div>
         <div class="document-meta"><input id="document-title" value="주간 업무 보고서" aria-label="문서 제목"><span id="document-stats">0자 · 0단어</span></div>
         <article class="document-paper" id="document-editor" contenteditable="true" spellcheck="true"><h1>주간 업무 보고서</h1><p><strong>작성일:</strong> 2026년 9월 22일</p><h2>이번 주 요약</h2><p>이번 주에 진행한 업무와 다음 액션을 정리해보세요.</p><ul><li>완료한 업무를 기록합니다.</li><li>다음 주 우선순위를 정합니다.</li></ul><h2>메모</h2><p>이 문서는 브라우저 안에만 저장됩니다.</p></article>
-        <div class="hwp-viewer-shell" id="hwp-viewer-shell" hidden><div class="hwp-viewer-heading"><strong id="hwp-file-name">HWP 미리보기</strong><button class="mini-button" id="close-hwp" type="button">편집기로 돌아가기</button></div><div id="hwp-viewer" class="hwp-viewer"></div></div>
         <div class="document-actions"><div class="action-row"><button class="primary-button" id="download-doc" type="button">한글·Word 호환 저장</button><button class="secondary-button" id="print-pdf" type="button">PDF로 저장</button><button class="secondary-button" id="download-html" type="button">HTML 저장</button><button class="text-button" id="download-md" type="button">Markdown</button><button class="text-button" id="download-txt" type="button">TXT</button></div><div class="document-tools"><button class="mini-button" id="load-document" type="button">문서/HWP 열기</button><button class="mini-button" id="clear-document" type="button">새 문서</button><input id="file-input" type="file" accept=".hwp,.html,.htm,.txt,.md,.markdown" hidden></div></div>
         <p class="tool-message" id="document-message" role="status">입력 내용은 이 브라우저에 자동 저장됩니다.</p>
+      </section>
+
+      <section class="tool-panel" id="tool-hwp" data-panel="hwp">
+        <div class="panel-heading"><div><p class="panel-kicker">HWP VIEWER</p><h2>HWP 뷰어</h2><p>한글 문서를 서버에 업로드하지 않고 이 브라우저에서 읽기 전용으로 확인합니다.</p></div><span class="shortcut">HWP 5.0 / 5.1</span></div>
+        <div class="hwp-dropzone"><div class="hwp-drop-icon">한</div><strong>HWP 파일을 선택하세요</strong><p>파일은 외부로 전송되지 않습니다. 현재 HWP 5.0/5.1 문서를 지원합니다.</p><button class="primary-button" id="hwp-load" type="button">HWP 파일 선택</button></div>
+        <div class="hwp-viewer-shell" id="hwp-viewer-shell" hidden><div class="hwp-viewer-heading"><strong id="hwp-file-name">HWP 미리보기</strong><button class="mini-button" id="close-hwp" type="button">파일 닫기</button></div><div id="hwp-viewer" class="hwp-viewer"></div></div>
+        <p class="tool-message" id="hwp-message" role="status">HWP 파일을 선택하면 미리보기가 이곳에 표시됩니다.</p>
       </section>
 
       <section class="tool-panel" id="tool-json" data-panel="json">
